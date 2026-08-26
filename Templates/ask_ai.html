@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Tutor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+<div class="card shadow p-4">
+
+<h2>🤖 AI Tutor</h2>
+
+<form method="POST">
+
+<div class="mb-3">
+
+<label>Ask your question</label>
+
+<textarea
+name="question"
+class="form-control"
+rows="5"
+placeholder="Example: Explain Operating System in simple words">
+</textarea>
+
+</div>
+
+<button class="btn btn-primary">
+Ask AI
+</button>
+
+</form>
+
+{% if answer %}
+
+<hr>
+
+<h4>Answer</h4>
+
+<div class="alert alert-success">
+<div class="answer-box">
+    {{ answer | safe }}
+</div>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</div>
+
+</body>
+</html>
